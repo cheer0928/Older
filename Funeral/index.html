@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安息之选</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 414px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header button {
+            border: none;
+            background: none;
+            font-size: 20px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .main-title {
+            background: #FFF4E6;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title-content h2 {
+            font-size: 28px;
+            color: #5D4037;
+            margin-bottom: 8px;
+        }
+
+        .title-content p {
+            font-size: 14px;
+            color: #8D6E63;
+        }
+
+        .service-grid {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .service-item {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .service-item h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .service-item p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .memorial-section {
+            margin: 15px;
+            background: #F3F4F6;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .location-section {
+            margin: 15px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .location-section img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .location-info {
+            padding: 15px;
+        }
+
+        /* 风水评估样式 */
+        .fengshui-section {
+            margin: 15px;
+            background: #F8F0FF;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .fengshui-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .fengshui-title h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .fengshui-title p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .fengshui-tags {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 2px 8px;
+            background: #fff;
+            border-radius: 12px;
+            color: #9C27B0;
+        }
+
+        .fengshui-masters {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .master-avatar {
+            position: relative;
+            margin-right: 12px;
+        }
+
+        .master-avatar img {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            object-fit: cover;
+        }
+
+        .master-status {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #4CAF50;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 8px;
+        }
+
+        .master-info {
+            flex: 1;
+        }
+
+        .master-info h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .master-info p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .consult-btn {
+            background: #9C27B0;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .consult-btn:hover {
+            background: #7B1FA2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <button>×</button>
+            <h1>安息之选</h1>
+            <button>⋯</button>
+        </header>
+
+        <div class="main-title">
+            <div class="title-content">
+                <h2>尊严告别</h2>
+                <p>专业贴心服务</p>
+            </div>
+            <div class="title-icon">
+                🕊️
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=300"
+                    alt="预约服务">
+                <h3>预约服务</h3>
+                <p>专业人员上门咨询</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1486825586573-7131f7991bdd?auto=format&fit=crop&w=300"
+                    alt="自选服务">
+                <h3>自选服务</h3>
+                <p>自助选择告别方式</p>
+            </div>
+        </div>
+
+        <div class="memorial-section">
+            <h3>数字纪念馆</h3>
+            <p>永久保存美好回忆</p>
+            <button
+                style="float: right; padding: 5px 10px; background: #FFF4E6; border: none; border-radius: 4px; margin-top: -30px;">免费创建</button>
+        </div>
+
+        <!-- 风水评估区块 -->
+        <div class="fengshui-section">
+            <div class="fengshui-header">
+                <div class="fengshui-title">
+                    <h3>风水评估</h3>
+                    <p>专业大师线上评估</p>
+                </div>
+                <div class="fengshui-tags">
+                    <span class="tag">八字分析</span>
+                    <span class="tag">方位勘测</span>
+                </div>
+            </div>
+            <div class="fengshui-masters">
+                <div class="master-avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100"
+                        alt="大师头像">
+                    <div class="master-status">在线</div>
+                </div>
+                <div class="master-info">
+                    <h4>李大师</h4>
+                    <p>从业20年 · 好评率98%</p>
+                </div>
+                <button class="consult-btn">立即咨询</button>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=400"
+                alt="安息基地">
+            <div class="location-info">
+                <h3>安息基地</h3>
+                <p>依山傍水，宁静祥和</p>
+                <button
+                    style="float: right; padding: 5px 10px; background: #F3F4F6; border: none; border-radius: 4px; margin-top: -30px;">查看位置</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

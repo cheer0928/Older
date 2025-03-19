@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自选服务 - 安息之选</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 414px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header button {
+            border: none;
+            background: none;
+            font-size: 20px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .service-tabs {
+            display: flex;
+            padding: 15px;
+            gap: 10px;
+            overflow-x: auto;
+            background: white;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #666;
+            background: #f5f5f5;
+            border: none;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+
+        .service-card {
+            margin: 15px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 15px;
+        }
+
+        .service-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            color: #FF9800;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .service-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .service-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 2px 8px;
+            background: #F5F5F5;
+            border-radius: 12px;
+            color: #666;
+        }
+
+        .select-btn {
+            width: 100%;
+            padding: 12px;
+            background: #E3F2FD;
+            color: #1976D2;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .select-btn:hover {
+            background: #BBDEFB;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <button onclick="history.back()">←</button>
+            <h1 style="font-size: 18px; font-weight: 500;">告别方式选择</h1>
+            <button>⋯</button>
+        </header>
+
+        <div class="service-tabs">
+            <button class="tab active">全部方式</button>
+            <button class="tab">土葬</button>
+            <button class="tab">火化</button>
+            <button class="tab">化石</button>
+            <button class="tab">海葬</button>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?auto=format&fit=crop&w=800"
+                alt="生态土葬" class="service-image">
+            <div class="service-content">
+                <div class="service-title">
+                    <span>生态土葬</span>
+                    <span class="price">¥8,999起</span>
+                </div>
+                <p class="service-desc">选择与自然融为一体的方式，在青山绿水间安息，让生命延续在大地之中</p>
+                <div class="service-tags">
+                    <span class="tag">环保棺材</span>
+                    <span class="tag">生态墓地</span>
+                    <span class="tag">永久产权</span>
+                </div>
+                <button class="select-btn">选择方案</button>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1604537466158-719b1972feb8?auto=format&fit=crop&w=800"
+                alt="尊严火化" class="service-image">
+            <div class="service-content">
+                <div class="service-title">
+                    <span>尊严火化</span>
+                    <span class="price">¥4,999起</span>
+                </div>
+                <p class="service-desc">现代文明的告别方式，环保卫生，可选骨灰装置多样，便于后人祭扫</p>
+                <div class="service-tags">
+                    <span class="tag">一对一服务</span>
+                    <span class="tag">骨灰定制</span>
+                    <span class="tag">礼仪规范</span>
+                </div>
+                <button class="select-btn">选择方案</button>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1507041957456-9c397ce39c97?auto=format&fit=crop&w=800"
+                alt="永恒化石" class="service-image">
+            <div class="service-content">
+                <div class="service-title">
+                    <span>永恒化石</span>
+                    <span class="price">¥6,999起</span>
+                </div>
+                <p class="service-desc">将骨灰转化为永恒的宝石，让珍贵的记忆以最美的方式留存</p>
+                <div class="service-tags">
+                    <span class="tag">宝石定制</span>
+                    <span class="tag">多色可选</span>
+                    <span class="tag">证书认证</span>
+                </div>
+                <button class="select-btn">选择方案</button>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=800" alt="海洋葬"
+                class="service-image">
+            <div class="service-content">
+                <div class="service-title">
+                    <span>海洋葬</span>
+                    <span class="price">¥5,999起</span>
+                </div>
+                <p class="service-desc">选择与海洋相伴，在蔚蓝的海域中安息，与自然生命相融</p>
+                <div class="service-tags">
+                    <span class="tag">环保容器</span>
+                    <span class="tag">专业船队</span>
+                    <span class="tag">纪念证书</span>
+                </div>
+                <button class="select-btn">选择方案</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

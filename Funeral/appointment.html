@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预约服务 - 安息之选</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 414px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header button {
+            border: none;
+            background: none;
+            font-size: 20px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .section-title {
+            padding: 20px 15px 10px;
+            font-size: 16px;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        .service-package {
+            margin: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .package-header {
+            padding: 15px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .package-title {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .package-price {
+            color: #FF9800;
+            font-size: 16px;
+        }
+
+        .package-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .package-items {
+            padding: 15px;
+        }
+
+        .package-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .item-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background: #E3F2FD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1976D2;
+        }
+
+        .item-text {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .book-btn {
+            width: calc(100% - 30px);
+            margin: 15px;
+            padding: 12px;
+            background: #E3F2FD;
+            color: #1976D2;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background: #BBDEFB;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 15px;
+        }
+
+        .time-slot {
+            padding: 10px;
+            text-align: center;
+            background: #f5f5f5;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .time-slot.available {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button onclick="history.back()">←</button>
+            <h1 style="font-size: 18px; font-weight: 500;">预约服务</h1>
+            <button>⋯</button>
+        </header>
+
+        <div class="section-title">咨询服务</div>
+        <div class="service-package">
+            <div class="package-header">
+                <div class="package-title">
+                    <span>上门咨询服务</span>
+                    <span class="package-price">免费</span>
+                </div>
+                <p class="package-desc">专业顾问提供一对一咨询，帮助您做出合适的选择</p>
+            </div>
+            <div class="package-items">
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">专业顾问上门服务</div>
+                </div>
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">详细解答疑问</div>
+                </div>
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">提供个性化方案</div>
+                </div>
+            </div>
+            <button class="book-btn">预约咨询</button>
+        </div>
+
+        <div class="section-title">殡仪馆预约</div>
+        <div class="service-package">
+            <div class="package-header">
+                <div class="package-title">
+                    <span>殡仪馆服务</span>
+                    <span class="package-price">¥2,999起</span>
+                </div>
+                <p class="package-desc">提供专业的殡仪馆预约及相关服务安排</p>
+            </div>
+            <div class="package-items">
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">场地预约</div>
+                </div>
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">礼仪服务</div>
+                </div>
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">一站式安排</div>
+                </div>
+            </div>
+            <div class="time-slots">
+                <div class="time-slot available">今天</div>
+                <div class="time-slot available">明天</div>
+                <div class="time-slot">后天</div>
+                <div class="time-slot available">周六</div>
+                <div class="time-slot">周日</div>
+                <div class="time-slot available">下周一</div>
+            </div>
+            <button class="book-btn">立即预约</button>
+        </div>
+
+        <div class="section-title">礼仪服务</div>
+        <div class="service-package">
+            <div class="package-header">
+                <div class="package-title">
+                    <span>告别仪式套餐</span>
+                    <span class="package-price">¥3,999起</span>
+                </div>
+                <p class="package-desc">专业礼仪团队，提供庄重温馨的告别仪式服务</p>
+            </div>
+            <div class="package-items">
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">专业礼仪人员</div>
+                </div>
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">场地布置</div>
+                </div>
+                <div class="package-item">
+                    <div class="item-icon">✓</div>
+                    <div class="item-text">仪式流程安排</div>
+                </div>
+            </div>
+            <button class="book-btn">预约礼仪</button>
+        </div>
+    </div>
+</body>
+</html> 
